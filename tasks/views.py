@@ -135,6 +135,14 @@ class AttachmentViewSet(mixins.CreateModelMixin, # for creation of a Attachment 
 
 def task_support(request, task_id):
     task =  get_object_or_404(Task, id=task_id)
+    
+    msg = None
+    if task.user.id != request.user.id:
+        msg = 'You have no access for this task.'
+    if task.completed:
+        msg = 'You can generate suggestion only for incomplete tasks.'
+    if msg:
+        HttpResponse(json.dumps({'error': msg}), content_type='application/json')
     openai.api_key = settings.OPENAI_KEY
 
     if settings.OPENAI_KEY != '':
