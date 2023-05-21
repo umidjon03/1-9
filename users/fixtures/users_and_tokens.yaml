@@ -1,0 +1,37 @@
+# USERS
+-
+    model: "users.User"
+    pk: 1
+    fields:
+        email: "test@mail.com"
+        username: "testuser"
+        firstname: "Test_bek"
+        password: "pbkdf2_sha256$180000$dL53PYUMI1pc$AvUBmqGnll5CtEALzr9jRm2H1qJxjOKF4OOkKOKfaJg=" # password
+
+-
+    model: "users.User"
+    pk: 2
+    fields:
+        email: "samuel@gmail.com"
+        username: "samuel2002"
+        firstname: "Samuel"
+        password: "pbkdf2_sha256$120000$Q3ICPM6omVjp$liGZrVdJWPLpkne0vjBLnJr4S+v49AoVABreMeAwNBU=" # password
+
+
+# TOKENS
+-
+    model: "users.Token"
+    pk: 1
+    fields:
+        user_id: 1
+        key: "af602e8f234ecc9ba03eb8eef2e6eb9c"
+        expires_at: "4000-01-01 00:00:00+00:00"
+
+-
+    model: "users.Token"
+    pk: 2
+    fields:
+        user_id: 2
+        key: "b4f89a9ae6c9dc283cac57ed870910f3"
+        expires_at: "4000-01-01 00:00:00+00:00"
+

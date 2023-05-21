@@ -1,0 +1,2 @@
+USER_TOKEN = 'af602e8f234ecc9ba03eb8eef2e6eb9c'
+USER2_TOKEN = 'b4f89a9ae6c9dc283cac57ed870910f3'
