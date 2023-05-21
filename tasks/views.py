@@ -29,7 +29,6 @@ class TaskListApiView(ListAPIView):
     filterset_fields = ['completed']
 
     def get_queryset(self):
-        print(self.request.user.id,'\n', Task.objects.filter(user = self.request.user.id))
         return self.filter_queryset(
             Task.objects.filter(
                 user = self.request.user.id
@@ -58,7 +57,6 @@ class TaskListApiView(ListAPIView):
 class TaskRUDApiView(APIView):
 
     def get_object(self, task_id, user_id):
-        print(Task.objects.get(id=task_id, user = user_id).id)
         try:
             return Task.objects.get(id=task_id, user = user_id)
         except Task.DoesNotExist:
@@ -116,7 +114,7 @@ class AttachmentViewSet(mixins.CreateModelMixin, # for creation of a Attachment 
     def create(self, request, *args, **kwargs):
         task_id = int(request.data.get('task'))
         task = get_object_or_404(Task, id=task_id)
-        print(task.id)
+
         if task.user != request.user:
             return HttpResponseForbidden('You do not have permission to upload attachments for this task')
         return super().create(request, *args, **kwargs)
@@ -136,9 +134,7 @@ class AttachmentViewSet(mixins.CreateModelMixin, # for creation of a Attachment 
 
 
 def task_support(request, task_id):
-    print('he0oooo')
     task =  get_object_or_404(Task, id=task_id)
-    print(settings.OPENAI_KEY)
     openai.api_key = settings.OPENAI_KEY
 
     if settings.OPENAI_KEY != '':
@@ -152,7 +148,6 @@ def task_support(request, task_id):
             )
     else:
         response = {'error': 'OpenAI key not configured'}
-    print(response)
     return HttpResponse(json.dumps(response), content_type='application/json')
 
 

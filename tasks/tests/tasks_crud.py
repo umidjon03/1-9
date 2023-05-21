@@ -1,7 +1,7 @@
 from django.urls import reverse
 from rest_framework.test import APITestCase
 
-from .constants import USER_TOKEN
+from users.tests.constants import USER_TOKEN
 from tasks.models import Task
 
 
