@@ -57,16 +57,17 @@ Description:  Integrate a third-party API into an existing Django Rest Framework
 MPV:
 As a third-party API, I chose OpenAi API. When user is lack of help or support he/she can use AI suggestion generator for the task
 Only required thing is that user should provide the values for the fields understandable and readable. Then, The ChatGPT 3.5 can generate support for his/her task.
-note: Don't fotget provide your openai key in .env file, for testing
+**note:** Don't fotget provide your openai key in .env file, for testing
 
-Note: For all view/viewset classes isAuthenticated is set as a default in settings.
+**Note:** For all view/viewset classes isAuthenticated is set as a default in settings.
 
-You can test all endpoinds by using postman requests which I provided in this repo as "HTTP requests" directory
+You can test all endpoinds by using postman requests which I provided in this repo as _"HTTP requests.json"_ directory
 But don't forget to use your own generated tokens for authentication. You can generate by signing up/in.
 
 Of course there are things to do, but the developer is running out of time/deadline :)
 
 If something looks like error or strange, please let me know or create issue in github for it.
-you can connect with me via email: shuxratovumidjon03@gmail.com
+Or you can create PR, if you want to add something.
+You can connect with me via email: shuxratovumidjon03@gmail.com
 
 
