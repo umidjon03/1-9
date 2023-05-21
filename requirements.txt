@@ -2,3 +2,4 @@ Django==4.2.1
 djangorestframework==3.14.0
 django-filter==23.2
 openai==0.27.7
+python-dotenv==1.0.0
