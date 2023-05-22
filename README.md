@@ -11,7 +11,7 @@ The user app does what mentioned in task 1. Register with certain fields and etc
 Description:  Implement a Django Rest Framework serializer for a specific model. The serializer should handle both read and write operations, including field validation and data transformation as necessary. Ensure that the serializer supports nested relationships if applicable.
 
 MPV:
-For this task, I covered only required asking. I created serializers that can read and write but not views and endpoints as they are required for this task. However, I provided python shell scripts inside python file as a comment to test the serializers. A tester can give his/her vulue for the fields
+For this task, I covered only required asking. I created serializers that can read and write but not views and endpoints as they ain't required for this task. However, I provided python shell scripts inside python file as a comment to test the serializers. A tester can give his/her vulue for the fields
 
 3.	Task: Implement API Endpoints for CRUD Operations
 Description:  Develop API endpoints using Django Rest Framework for creating, reading, updating, and deleting objects of a specific model. The endpoints should follow RESTful conventions, handle appropriate HTTP methods (POST, GET, PUT, DELETE), and include proper error handling and response status codes.
